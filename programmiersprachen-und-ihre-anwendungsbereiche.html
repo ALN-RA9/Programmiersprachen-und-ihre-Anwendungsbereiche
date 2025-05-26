@@ -64,10 +64,14 @@
         }
 
         section {
-          margin-bottom: 3rem;
-          padding: 1rem;
-          background-color: #f7f7f7;
-          border-radius: 8px;
+            position: relative; /* нужно для абсолютного позиционирования вложенного элемента */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden; /* если хочешь обрезать выходящий текст */
         }
         
         .mehr-info {
