@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmiersprachen und ihre Anwendungsbereiche</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.15.1/devicon.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        i[class^="devicon-"] {
+            background: transparent !important;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        section:hover {
+            transform: scale(1.02); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 5px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px; /* закруглённые углы */
+            text-decoration: none;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+        body {
+            background-color: #e6ecf0;
+            color: #111;
+        }
+
+        header {
+            background-color: #2a2a2a;
+        }
+
+        nav ul li a {
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        section {
+            background-color: #fafafa;
+            border-color: #bbb;
+        }
+
+        .mehr-info {
+            background-color: rgba(30, 30, 30, 0.8);
+            font-size: 28px;
+        }
+
+        footer {
+            background-color: #2a2a2a;
+            color: #eee;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+        }
+
+        section {
+            margin: 10px 0;
+            padding: 12px;
+        }
+
+        h2, h3 {
+            font-size: 1.2em;
+        }
+
+        pre {
+            font-size: 0.9em;
+            background-color: #ddd;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <a id="top"></a>
+    <header>
+        <h1>
+            <a href="programmiersprachen-und-ihre-anwendungsbereiche.html" style="color:  inherit; text-decoration: none; cursor: default;">Programmiersprachen und</a>
+            <a href="Anwendungsbereiche.html" style="color:  inherit; text-decoration: none; cursor: default;">Anwendungsbereiche</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#python"><i class="devicon-python-plain colored"></i> Python</a></li>
+                <li><a href="#javascript"><i class="devicon-javascript-plain colored"></i> JavaScript</a></li>
+                <li><a href="#cpp"><i class="devicon-cplusplus-plain colored"></i> C++</a></li>
+                <li><a href="#kotlin"><i class="devicon-kotlin-plain colored"></i> Kotlin</a></li>
+                <li><a href="#r"><i class="devicon-r-original colored"></i> R</a></li>
+                <li><a href="#swift"><i class="devicon-swift-plain colored"></i> Swift</a></li>
+                <li><a href="#objc"><i class="devicon-objectivec-plain colored"></i> Objective-C</a></li>
+                <li><a href="#csharp"><i class="devicon-csharp-plain colored"></i> C#</a></li>
+                <li><a href="#java"><i class="devicon-java-plain colored"></i> Java</a></li>
+                <li><a href="#htmlcss"><i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i> HTML/CSS</a></li>
+                <li><a href="#php"><i class="devicon-php-plain colored"></i> PHP</a></li>
+                <li><a href="#lua"><i class="devicon-lua-plain colored"></i> Lua</a></li>
+                <li><a href="#bash"><i class="devicon-bash-plain colored"></i> Bash</a></li>
+                <li><a href="#powershell"><i class="devicon-windows8-original colored"></i> PowerShell</a></li>
+                <li><a href="#c"><i class="devicon-c-plain colored"></i> C</a></li>
+                <li><a href="#rust"><i class="devicon-rust-plain colored"></i> Rust</a></li>
+                <li><a href="#go"><i class="devicon-go-plain colored"></i> Go</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about-project">
+            <h2>Über dieses Projekt</h2>
+            <p>
+              Dieses Projekt bietet eine kurze und übersichtliche Einführung in verschiedene Programmiersprachen. 
+              Es richtet sich an alle, die schnell und einfach grundlegende Informationen über wichtige Programmiersprachen erhalten möchten – ideal für Anfänger und alle, die einen ersten Überblick suchen.
+            </p>
+            <h3>Ziel</h3>
+            <p>
+              Das Ziel ist es, die wichtigsten Eigenschaften, Einsatzgebiete und Beispielcodes der Sprachen verständlich darzustellen, damit jeder schnell entscheiden kann, welche Sprache für ihn interessant ist.
+            </p>
+        </section>        
+             
+        <section id="python">
+                <h2>Python</h2>
+                <p><strong>Verwendungsbereich:</strong> Datenanalyse, Webentwicklung, Künstliche Intelligenz, Automatisierung.</p>
+                <h3>Beispielcode:</h3>
+                <pre><code>
+def hello_world():
+    print("Hello, World!")
+        
+hello_world()
+                </code></pre>
+                <a href="python.html" class="mehr-info">Mehr Info</a>
+            </section>
+    
+        <section id="javascript">
+            <h2>JavaScript</h2>
+            <p><strong>Verwendungsbereich:</strong> Webentwicklung (Frontend), Interaktive Webseiten, Server-Seitenentwicklung.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+function hello_world() {
+    alert("Hello, World!");
+}
+
+hello_world();
+            </code></pre>
+            <a href="JavaScript.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="cpp">
+            <h2>C++</h2>
+            <p><strong>Verwendungsbereich:</strong> Spieleentwicklung, Systemprogrammierung, Anwendungen mit hoher Performance.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+            </code></pre>
+            <a href="C++.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="kotlin">
+            <h2>Kotlin</h2>
+            <p><strong>Verwendungsbereich:</strong> Android-Entwicklung, Backend-Entwicklung, moderne Java-Alternative.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+fun main() {
+    println("Hello, World!")
+}
+            </code></pre>
+            <a href="Kotlin.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        
+        <section id="r">
+            <h2>R</h2>
+            <p><strong>Verwendungsbereich:</strong> Statistik, Datenanalyse, Visualisierung.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+print("Hello, World!")
+            </code></pre>
+            <a href="R.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="swift">
+            <h2>Swift</h2>
+            <p><strong>Verwendungsbereich:</strong> iOS/macOS-Anwendungsentwicklung.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+print("Hello, World!")
+            </code></pre>
+            <a href="Swift.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="objc">
+            <h2>Objective-C</h2>
+            <p><strong>Verwendungsbereich:</strong> iOS/macOS-Entwicklung (älterer Standard).</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+#import <Foundation/Foundation.h>
+
+int main() {
+    NSLog(@"Hello, World!");
+    return 0;
+}
+            </code></pre>
+            <a href="Objektive-C.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="csharp">
+            <h2>C#</h2>
+            <p><strong>Verwendungsbereich:</strong> Windows-Anwendungen, Spiele (Unity), Web-Apps (ASP.NET).</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+using System;
+
+class Programm {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}
+            </code></pre>
+            <a href="C-sharp.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="java">
+            <h2>Java</h2>
+            <p><strong>Verwendungsbereich:</strong> Unternehmenssoftware, Android, Webserver.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+            </code></pre>
+            <a href="Java.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="htmlcss">
+            <h2>HTML / CSS</h2>
+            <p><strong>Verwendungsbereich:</strong> Webseitenstruktur und Gestaltung.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;style&gt;body { color: black; }&lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;p&gt;Hello, World!&lt;/p&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+            </code></pre>
+            <a href="HTCS.html" class="mehr-info">Mehr Info</a>
+        </section>
+ 
+
+        <section id="php">
+            <h2>PHP</h2>
+            <p><strong>Verwendungsbereich:</strong> Serverseitige Webentwicklung.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>&lt;?php
+        echo "Hello, World!";
+        ?&gt;</code></pre>
+        <a href="PHP.html" class="mehr-info">Mehr Info</a>
+        </section>    
+  
+
+        <section id="lua">
+            <h2>Lua</h2>
+            <p><strong>Verwendungsbereich:</strong> Spieleentwicklung (z.B. Roblox), eingebettete Systeme.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+print("Hello, World!")
+            </code></pre>
+            <a href="Lua.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="bash">
+            <h2>Bash</h2>
+            <p><strong>Verwendungsbereich:</strong> Automatisierung unter Linux/Unix.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+#!/bin/bash
+echo "Hello, World!!"
+            </code></pre>
+            <a href="Bash.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="powershell">
+            <h2>PowerShell</h2>
+            <p><strong>Verwendungsbereich:</strong> Automatisierung unter Windows.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+Write-Output "Hello, World!"
+            </code></pre>
+            <a href="PowerShell.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="c">
+            <h2>C</h2>
+            <p><strong>Verwendungsbereich:</strong> Systemprogrammierung, eingebettete Systeme, Betriebssysteme.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+            </code></pre>
+            <a href="C.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="rust">
+            <h2>Rust</h2>
+            <p><strong>Verwendungsbereich:</strong> Systemprogrammierung, sichere Softwareentwicklung.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+fn main() {
+    println!("Hello, World!");
+}
+            </code></pre>
+            <a href="Rust.html" class="mehr-info">Mehr Info</a>
+        </section>
+
+
+        <section id="go">
+            <h2>Go (Golang)</h2>
+            <p><strong>Verwendungsbereich:</strong> Webentwicklung, Serverprogrammierung, Cloud-Anwendungen.</p>
+            <h3>Beispielcode:</h3>
+            <pre><code>
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+            </code></pre>
+            <a href="Go.html" class="mehr-info">Mehr Info</a>
+        </section>
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alle Rechte vorbehalten</p>
+    </footer>
+    <a href="#top" class="scroll-to-top">&#8679;</a>
+</body>
+</html>
+           
